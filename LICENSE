@@ -20,7 +20,7 @@ pragma solidity 0.8.9;
 contract MyToken {
 
     // Public variables 
-    string public name My_Token = "Blockchain ";  
+    string public name = "Blockchain ";  
     string public symbol = "MTK";    
     uint256 public totalSupply = 0;  
 
@@ -28,12 +28,14 @@ contract MyToken {
     mapping(address => uint) public balances;
 
     // Mint function that increases the total supply and the balance of the given address
+
     function mint(address _to, uint256 _value) public {
         totalSupply += _value;
         balances[_to] += _value;
     }
 
     // Burn function that decreases the total supply and the balance of the given address
+
     function burn(address _from, uint256 _value) public {
         require(balances[_from] >= _value, "Insufficient balance to burn");
         totalSupply -= _value;
