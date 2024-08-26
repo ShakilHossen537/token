@@ -1,21 +1,26 @@
-MIT License
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.9;
 
-Copyright (c) 2024 Shakil Hossen
+contract MyToken {
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+    // Public variables that store the details about your coin
+    string public name My_Token = " ";  
+    string public symbol = "MTK";    
+    uint256 public totalSupply = 0;  
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+    // Mapping of addresses to balances
+    mapping(address => uint) public balances;
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+    // Mint function that increases the total supply and the balance of the given address
+    function mint(address _to, uint256 _value) public {
+        totalSupply += _value;
+        balances[_to] += _value;
+    }
+
+    // Burn function that decreases the total supply and the balance of the given address
+    function burn(address _from, uint256 _value) public {
+        require(balances[_from] >= _value, "Insufficient balance to burn");
+        totalSupply -= _value;
+        balances[_from] -= _value;
+    }
+}
