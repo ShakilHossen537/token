@@ -36,9 +36,9 @@ Create a New File:
 
 Copy and Paste the Solidity Code:
 
-=>Copy the Solidity code provided link : https://github.com/Sourov2002t/ETH_Project/blob/main/Token.sol which is visible on github page.
+=>Copy the Solidity code provided link : (https://github.com/ShakilHossen537/token/blob/main/Token.sol) which is visible on github page.
 
-=>Paste it into the newly created BifrostToken.sol file in Remix.
+=>Paste it into the newly created token.sol file in Remix.
 
 Compile the Code:
 
@@ -85,3 +85,12 @@ View Token Details:
 => Click on the tokenName, tokenAbbrv, and totalSupply buttons to display their values.
 
 By following these instructions, you can successfully deploy and interact with the "Blockchain" contract on the Ethereum blockchain using Remix.
+
+* Authors
+  
+=> Sakil Hossen
+
+Github : https://github.com/ShakilHossen537
+
+# License
+This project is licensed under the MIT License - see the link ( https://github.com/Sourov2002t/ETH_Project/blob/main/LICENSE ) for details.
