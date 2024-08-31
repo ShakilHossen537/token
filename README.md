@@ -93,4 +93,5 @@ By following these instructions, you can successfully deploy and interact with t
 Github : https://github.com/ShakilHossen537
 
 # License
-This project is licensed under the MIT License - see the link ( https://github.com/Sourov2002t/ETH_Project/blob/main/LICENSE ) for details.
+
+This project is licensed under the MIT License - see the link ( https://github.com/ShakilHossen537/token/blob/main/LICENSE ) for details.
